@@ -1,5 +1,7 @@
 const express = require ('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
+const path = require('path');
 
 const routes = require('./routes');
 
@@ -19,7 +21,9 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-n9w78.mongodb.net/
 // req.body = Acessar corpo da requisição (tanto para criação, edição)
 // exemplo: htt://localhost:3333/users
 
+app.use(cors()); //poderia definir o origins indicando local que poderia acessar a aplicaçã
 app.use(express.json());
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')))
 app.use(routes); //Precisa vir depois
 
 app.listen(3333);
