@@ -21,7 +21,6 @@ export default function New({ history }) {
         const data = new FormData();
         const user_id = localStorage.getItem('user');
 
-
         data.append('thumbnail', thumbnail);
         data.append('company', company);
         data.append('techs', techs);
