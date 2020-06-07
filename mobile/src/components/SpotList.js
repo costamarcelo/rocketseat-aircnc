@@ -39,7 +39,7 @@ import api from '../services/api';
                     <View style={styles.listItem}>
                         <Image style={styles.thumbnail} source={{ uri: item.thumbnail_url }} />
                         <Text style={styles.company}>{item.company}</Text>
-                        <Text style={styles.price}>{item.price ? `R$${item.price}/dia` : 'Gratuitos'}</Text>
+                        <Text style={styles.price}>{item.price ? `R$${item.price}/dia` : 'Gratuito'}</Text>
                         <TouchableOpacity onPress={() => handleNavigate(item._id)} style={styles.button}>
                             <Text style={styles.buttonText}>Solicitar reserva</Text>
                         </TouchableOpacity>

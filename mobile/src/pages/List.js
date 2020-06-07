@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
         height: 32,
         resizeMode: 'contain',
         alignSelf: 'center',
-        marginTop: 10,
-    }
+        marginTop: 40,
+    },
 });
